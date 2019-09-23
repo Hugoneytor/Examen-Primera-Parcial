@@ -10,28 +10,32 @@ function amigos(){
 }
 
     function numerosAmigos(numero,a,b){
-        if(numeroUno(numero,a) == numeroDos(numero,b) ){
-            console.log(numeroUno(numero,a)+ ',' + numeroDos(numero,b) )
+        if(numeroUno(numero,a) == numeroDos(numero,b) && numeroDos(numero,b) == numeroUno(numero,a) ){
+            return (numeroUno(numero,a)+ ', ' + numeroDos(numero,b) )
         }else{
-            console.log('No hay números amigos');
+            return 'No hay números amigos';
         }
     }
 
     function numeroUno(numero,a){
-        suma = 0;
-        for( a = 1; a < numero;a++){
-            if(numero%a==0){
-                suma += a;
+       let  suma = 0;
+        for( i = 1; i < numero;i++){
+            for(a = 1; a < i; a++){
+                if(i%a==0){
+                    suma += a;
+                }
             }
         }
         return suma
 }
 
     function numeroDos(numero,b){
-        suma = 0;
-        for( b = 1; b < numero;b++){
-            if(numero%b==0){
-                suma += b;
+        let suma = 0;
+        for( i = 1; i < numero;i++){
+            for(b = 1; b < i; b++){
+                if(i%b==0){
+                    suma += b;
+                }
             }
         }
         return suma
