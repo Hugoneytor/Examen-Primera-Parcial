@@ -69,8 +69,7 @@ class Salidas{
             this._horaFin = 0;
             this._secuencia[avance] += 1;
         }
-        this._horaFin = ruta.tiempo;
-
+        
     }
 
 }
